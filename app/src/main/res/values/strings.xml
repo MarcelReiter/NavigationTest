@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">NavigationTest</string>
+
+    <!-- Menu Names -->
+    <!-- bottom bar menu -->
+    <string name="drawer_test_menu_entry_name">Drawer</string>
+    <string name="destination_test_menu_entry_name">Destination</string>
+    <string name="overflow_test_menu_entry_name">Overflow</string>
+    <string name="code_test_menu_entry_name">Code</string>
+    <!-- drawer-menu -->
+    <string name="drawer_a_menu_entry_name">DrawerEintrag A</string>
+    <string name="drawer_b_menu_entry_name">DrawerEintrag B</string>
+    <string name="drawer_c_menu_entry_name">DrawerEintrag C</string>
+    <string name="drawer_d_menu_entry_name">DrawerEintrag D</string>
+    <!-- overflow-menu -->
+    <string name="overflow_a_menu_entry_name">OverflowEintrag A</string>
+    <string name="overflow_b_menu_entry_name">OverflowEintrag B</string>
+    <string name="overflow_c_menu_entry_name">OverflowEintrag C</string>
+    <string name="overflow_d_menu_entry_name">OverflowEintrag D</string>
+
+    <!-- Headers -->
+    <!-- drawer -->
+    <string name="drawer_test_header">DrawerTest</string>
+    <string name="drawer_a_header">DrawerTest A</string>
+    <string name="drawer_b_header">DrawerTest B</string>
+    <string name="drawer_c_header">DrawerTest C</string>
+    <string name="drawer_d_header">DrawerTest D</string>
+    <!-- overflow -->
+    <string name="overflow_test_header">OverflowTest</string>
+    <string name="overflow_a_header">OverflowTest A </string>
+    <string name="overflow_b_header">OverflowTest B</string>
+    <string name="overflow_c_header">OverflowTest C</string>
+    <string name="overflow_d_header">OverflowTest D</string>
+    <!-- destination -->
+    <string name="destination_test_header">DestinationTest</string>
+    <string name="destination_a_header">DestinationTest A</string>
+    <string name="destination_b_header">DestinationTest B</string>
+    <string name="destination_c_header">DestinationTest C</string>
+    <!-- code -->
+    <string name="code_header">Code</string>
+
+    <!-- Content -->
+    <!-- drawer -->
+    <string name="drawer_test_content">Teste den Drawer!</string>
+    <string name="drawer_a_content">Teste den\n Appbar-Up-Button!</string>
+    <string name="drawer_b_content">Teste den Zurück-Button!</string>
+    <string name="drawer_c_content">Teste den Drawer-Button!</string>
+    <string name="drawer_d_content">Weiter gehts mit dem Overflow-Menü!</string>
+    <!-- overflow -->
+    <string name="overflow_test_content">Teste das Overflow-Menü!</string>
+    <string name="overflow_a_content">Teste den\n Appbar-Up-Button!</string>
+    <string name="overflow_b_content">Teste den Zurück-Button!</string>
+    <string name="overflow_c_content">Teste den Overflow-Button!</string>
+    <string name="overflow_d_content">Weiter gehts mit Destination-Navigation!</string>
+    <!-- destination -->
+    <string name="destination_test_content">Teste Navigation\nvia Destination!\n\n(Sprung zu Ziel OHNE Animation) </string>
+    <string name="destination_a_content">Teste Navigation\nvia Destination!\n\n(Sprung zu Ziel MIT Animations-Argument)</string>
+    <string name="destination_b_content">Teste Navigation\nvia Action!\n\n(Navigation auf\n festgelegtem Pfad)</string>
+    <string name="destination_c_content">Teste Deep Linking\n in einen komplett anderen Bereich der App</string>
+    <!-- code -->
+    <string name="code_layout_header">Layout</string>
+
+</resources>

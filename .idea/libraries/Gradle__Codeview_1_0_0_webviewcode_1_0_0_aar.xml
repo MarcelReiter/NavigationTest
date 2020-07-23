@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: Codeview-1.0.0:webviewcode:1.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d02ba1b3bcb2678d03d99b87ee4a349f/jetified-webviewcode-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d02ba1b3bcb2678d03d99b87ee4a349f/jetified-webviewcode-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d02ba1b3bcb2678d03d99b87ee4a349f/jetified-webviewcode-1.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/Codeview-1.0.0/webviewcode/1.0.0/f823bf50ecdc90921919ee88067ed74c6947bdd8/webviewcode-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/Codeview-1.0.0/webviewcode/1.0.0/ac1da997da4c02a94f386ea795386c1319eaedec/webviewcode-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

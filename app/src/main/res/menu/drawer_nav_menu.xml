@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/DrawerADest"
+        android:icon="@drawable/ic_baseline_drag_handle_24"
+        android:menuCategory="secondary"
+        android:title="@string/drawer_a_menu_entry_name" />
+
+    <item
+        android:id="@+id/DrawerBDest"
+        android:icon="@drawable/ic_baseline_dehaze_24"
+        android:menuCategory="secondary"
+        android:title="@string/drawer_b_menu_entry_name" />
+
+    <item
+        android:id="@+id/DrawerCDest"
+        android:icon="@drawable/ic_baseline_reorder_24"
+        android:menuCategory="secondary"
+        android:title="@string/drawer_c_menu_entry_name" />
+
+    <item
+        android:id="@+id/DrawerDDest"
+        android:icon="@drawable/ic_baseline_format_align_justify_24"
+        android:menuCategory="secondary"
+        android:title="@string/drawer_d_menu_entry_name" />
+</menu>

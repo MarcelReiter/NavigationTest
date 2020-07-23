@@ -1,0 +1,123 @@
+<html>
+<body>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:0em 0em 0em 0em;padding:0em 0em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/*</span>
+<span style="color: #888888">* Navigation has 3 important components:</span>
+<span style="color: #888888">* 1) the graph</span>
+<span style="color: #888888">* 2) the hostView in the layout</span>
+<span style="color: #888888">* 3) the controller -&gt; depicted here</span>
+<span style="color: #888888">*/</span>
+
+<span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">MainActivity</span> : AppCompatActivity() {
+    <span style="color: #008800; font-weight: bold">private</span> lateinit <span style="color: #008800; font-weight: bold">var</span> navController: NavController
+    <span style="color: #008800; font-weight: bold">private</span> lateinit <span style="color: #008800; font-weight: bold">var</span> appBarConfiguration: AppBarConfiguration
+
+    <span style="color: #008800; font-weight: bold">override</span> <span style="color: #008800; font-weight: bold">fun</span> <span style="color: #0066BB; font-weight: bold">onCreate</span>(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        <span style="color: #888888">// getting the nav controller</span>
+        navController = findNavController(R.id.navigationHostFragment)
+
+        <span style="color: #888888">// informing every navigation-aware child about the controller</span>
+        setupToolbar()
+        setupDrawer()
+        setupBottomNavigation()
+
+        <span style="color: #888888">// btw. there is a listener, when a destination changed -&gt; Adobe Analytics?</span>
+        <span style="color: #888888">//navController.addOnDestinationChangedListener(/* do sth */)</span>
+    }
+
+    <span style="color: #008800; font-weight: bold">private</span> <span style="color: #008800; font-weight: bold">fun</span> <span style="color: #0066BB; font-weight: bold">setupToolbar</span>() {
+        setSupportActionBar(toolbar)
+
+        <span style="color: #888888">// up-or-burger-icon</span>
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.DrawerTestDest,
+                R.id.OverflowTestDest,
+                R.id.DestinationTestDest,
+                R.id.CodeListFragmentDest
+            ),
+            drawerLayout
+        )
+
+        toolbar.setupWithNavController(navController, appBarConfiguration)
+    }
+
+    <span style="color: #008800; font-weight: bold">private</span> <span style="color: #008800; font-weight: bold">fun</span> <span style="color: #0066BB; font-weight: bold">setupDrawer</span>() {
+        drawerNavigationView.setupWithNavController(navController)
+    }
+
+    <span style="color: #008800; font-weight: bold">private</span> <span style="color: #008800; font-weight: bold">fun</span> <span style="color: #0066BB; font-weight: bold">setupBottomNavigation</span>() {
+        bottomNavigationView.setupWithNavController(navController)
+    }
+
+    <span style="color: #888888">// if a menu-item is linked to a destination then navigate else handle as usual</span>
+    <span style="color: #008800; font-weight: bold">override</span> <span style="color: #008800; font-weight: bold">fun</span> <span style="color: #0066BB; font-weight: bold">onOptionsItemSelected</span>(item: MenuItem): Boolean {
+        <span style="color: #008800; font-weight: bold">return</span> item.onNavDestinationSelected(navController)
+                || super.onOptionsItemSelected(item)
+    }
+}
+</pre></td></tr></table></div>
+
+
+</body>
+</html>

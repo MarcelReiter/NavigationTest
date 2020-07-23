@@ -1,0 +1,124 @@
+<html>
+<body>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:0em 0em 0em 0em;padding:0em 0em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+</pre></td><td><pre style="margin: 0; line-height: 125%">
+<span style="color: #888888">/*</span>
+<span style="color: #888888">* SafeArgs are a new SAFE way of passing data between fragments.</span>
+<span style="color: #888888">* 0) activate safe args in gradle, see https://developer.android.com/guide/navigation/navigation-pass-data</span>
+<span style="color: #888888">* 1) In the navGraph, add arguments to the receiver</span>
+<span style="color: #888888">* 2) In the sender, pass the arguments</span>
+<span style="color: #888888">* 3) In the receiver you an now retrieve TYPESAFE args</span>
+<span style="color: #888888">*/</span>
+
+<span style="color: #888888">&lt;!-- Step 1 --&gt;</span>
+    <span style="color: #007700">&lt;fragment</span>
+        <span style="color: #0000CC">android:id=</span><span style="background-color: #fff0f0">&quot;@+id/CodeDetailDest&quot;</span>
+        <span style="color: #0000CC">android:name=</span><span style="background-color: #fff0f0">&quot;com.example.navigationtest.ui.code.CodeDetailFragment&quot;</span> <span style="color: #007700">&gt;</span>
+
+        <span style="color: #007700">&lt;argument</span>
+            <span style="color: #0000CC">android:name=</span><span style="background-color: #fff0f0">&quot;header&quot;</span>
+            <span style="color: #0000CC">app:argType=</span><span style="background-color: #fff0f0">&quot;string&quot;</span> <span style="color: #007700">/&gt;</span>
+
+        <span style="color: #007700">&lt;argument</span>
+            <span style="color: #0000CC">android:name=</span><span style="background-color: #fff0f0">&quot;pathToContent&quot;</span>
+            <span style="color: #0000CC">app:argType=</span><span style="background-color: #fff0f0">&quot;string&quot;</span> <span style="color: #007700">/&gt;</span>
+<span style="color: #007700">&lt;/fragment&gt;</span>
+
+<span style="color: #888888">// Step 2</span>
+<span style="color: #888888">// class CodeListFragment</span>
+button.setOnClickListener {
+
+    <span style="color: #888888">//navigate to</span>
+    findNavController().navigate(
+
+        <span style="color: #888888">// a generated directionsObject</span>
+        CodeListFragmentDirections
+
+            <span style="color: #888888">//which has an action associated with it</span>
+            .actionCodeListFragmentDestToCodeDetailDest(
+
+                <span style="color: #888888">// which takes arguments defined in the nav_graph</span>
+                headerContentPair.first,
+                headerContentPair.second
+            )
+    )
+}
+
+<span style="color: #888888">// Step 3</span>
+<span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">CodeDetailFragment</span> : Fragment() {
+
+    <span style="color: #008800; font-weight: bold">private</span> <span style="color: #008800; font-weight: bold">val</span> navArgs: CodeDetailFragmentArgs by navArgs()
+
+    <span style="color: #008800; font-weight: bold">override</span> <span style="color: #008800; font-weight: bold">fun</span> <span style="color: #0066BB; font-weight: bold">onCreateView</span>(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?) =
+        FragmentCodeDetailBinding.inflate(inflater).apply {
+
+        <span style="color: #888888">// title</span>
+        (activity <span style="color: #008800; font-weight: bold">as</span> MainActivity).title = navArgs.header
+
+        <span style="color: #888888">// setting content</span>
+        webView.loadUrl(navArgs.pathToContent)
+
+    }.root
+}
+</pre></td></tr></table></div>
+
+</body>
+</html>

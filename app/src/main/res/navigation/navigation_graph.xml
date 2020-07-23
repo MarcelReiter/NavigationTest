@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/DrawerTestDest">
+
+    <fragment
+        android:id="@+id/DrawerTestDest"
+        android:name="com.example.navigationtest.ui.drawer.DrawerTestFragment"
+        android:label="@string/drawer_test_header"
+        tools:layout="@layout/fragment_drawer_test">
+
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="NavigationTest://navigation_item_drawer_test" />
+    </fragment>
+    <fragment
+        android:id="@+id/DrawerADest"
+        android:name="com.example.navigationtest.ui.drawer.DrawerAFragment"
+        android:label="@string/drawer_a_header"
+        tools:layout="@layout/fragment_drawer_a" />
+    <fragment
+        android:id="@+id/DrawerBDest"
+        android:name="com.example.navigationtest.ui.drawer.DrawerBFragment"
+        android:label="@string/drawer_b_header"
+        tools:layout="@layout/fragment_drawer_b" />
+    <fragment
+        android:id="@+id/DrawerCDest"
+        android:name="com.example.navigationtest.ui.drawer.DrawerCFragment"
+        android:label="@string/drawer_c_header"
+        tools:layout="@layout/fragment_drawer_c" />
+    <fragment
+        android:id="@+id/DrawerDDest"
+        android:name="com.example.navigationtest.ui.drawer.DrawerDFragment"
+        android:label="@string/drawer_d_header"
+        tools:layout="@layout/fragment_drawer_d"/>
+
+    <fragment
+        android:id="@+id/OverflowTestDest"
+        android:name="com.example.navigationtest.ui.overflow.OverflowTestFragment"
+        android:label="@string/overflow_test_header"
+        tools:layout="@layout/fragment_overflow_test" />
+    <fragment
+        android:id="@+id/OverflowADest"
+        android:name="com.example.navigationtest.ui.overflow.OverflowAFragment"
+        android:label="@string/overflow_a_header"
+        tools:layout="@layout/fragment_overflow_a" />
+    <fragment
+        android:id="@+id/OverflowBDest"
+        android:name="com.example.navigationtest.ui.overflow.OverflowBFragment"
+        android:label="@string/overflow_b_header"
+        tools:layout="@layout/fragment_overflow_b" />
+    <fragment
+        android:id="@+id/OverflowCDest"
+        android:name="com.example.navigationtest.ui.overflow.OverflowCFragment"
+        android:label="@string/overflow_c_header"
+        tools:layout="@layout/fragment_overflow_c" />
+    <fragment
+        android:id="@+id/OverflowDDest"
+        android:name="com.example.navigationtest.ui.overflow.OverflowDFragment"
+        android:label="@string/overflow_d_header"
+        tools:layout="@layout/fragment_overflow_d"/>
+
+    <navigation
+        android:id="@+id/destGraph"
+        app:startDestination="@id/DestinationTestDest">
+        <fragment
+            android:id="@+id/DestinationTestDest"
+            android:name="com.example.navigationtest.ui.destination.DestinationTestFragment"
+            android:label="@string/destination_test_header"
+            tools:layout="@layout/fragment_destination_test" />
+        <fragment
+            android:id="@+id/DestinationADest"
+            android:name="com.example.navigationtest.ui.destination.DestinationAFragment"
+            android:label="DestinationAFragment"
+            tools:layout="@layout/fragment_destination_a" />
+        <fragment
+            android:id="@+id/DestinationBDest"
+            android:name="com.example.navigationtest.ui.destination.DestinationBFragment"
+            android:label="DestinationBFragment"
+            tools:layout="@layout/fragment_destination_b">
+            <action
+                android:id="@+id/action_DestinationBDest_to_DestinationCDest"
+                app:destination="@id/DestinationCDest"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+        </fragment>
+        <fragment
+            android:id="@+id/DestinationCDest"
+            android:name="com.example.navigationtest.ui.destination.DestinationCFragment"
+            android:label="DestinationCFragment"
+            tools:layout="@layout/fragment_destination_c" />
+    </navigation>
+
+    <fragment
+        android:id="@+id/CodeListFragmentDest"
+        android:name="com.example.navigationtest.ui.code.CodeListFragment"
+        android:label="@string/code_test_menu_entry_name"
+        tools:layout="@layout/fragment_code">
+        <action
+            android:id="@+id/action_CodeListFragmentDest_to_CodeDetailDest"
+            app:destination="@id/CodeDetailDest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/CodeDetailDest"
+        android:name="com.example.navigationtest.ui.code.CodeDetailFragment"
+        android:label="CodeDetailFragment"
+        tools:layout="@layout/fragment_code">
+        <argument
+            android:name="header"
+            app:argType="string" />
+        <argument
+            android:name="pathToContent"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>
+

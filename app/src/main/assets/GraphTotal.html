@@ -1,0 +1,183 @@
+<html>
+<head>
+    <style>
+        tr.border_bottom td.border_bottom {
+            border-bottom: 1px solid black;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<table style="width:100%">
+    <tr class="border_bottom">
+        <td class="border_bottom">
+
+            <!-- HTML generated using hilite.me -->
+            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:0em 0em 0em 0em;padding:0em 0em;">
+                <table>
+                    <tr>
+                        <td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4
+5
+6
+5
+6
+7
+8
+9
+10
+</pre>
+                        </td>
+                        <td><pre style="margin: 0; line-height: 125%"><span
+                                style="color: #888888">&lt;!--</span>
+<span style="color: #888888">Navigation has 3 important components:</span>
+<span style="color: #888888">1) the graph -&gt; depicted here</span>
+<span style="color: #888888">2) the hostView in the layout</span>
+<span style="color: #888888">3) the controller</span>
+<span style="color: #888888">--&gt;</span>
+
+<span style="color: #888888">&lt;!--</span>
+<span style="color: #888888">The graph has multiple Elements:</span>
+<span style="color: #888888">--&gt;</span>
+</pre>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td class="border_bottom">
+            <img src="img_graphtotal.png">
+        </td>
+    </tr>
+    <tr class="border_bottom">
+        <td class="border_bottom">
+            <!-- HTML generated using hilite.me -->
+            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:0em 0em 0em 0em;padding:0em 0em;">
+                <table>
+                    <tr>
+                        <td><pre style="margin: 0; line-height: 125%">1
+2
+3
+4
+5
+6</pre>
+                        </td>
+                        <td><pre style="margin: 0; line-height: 125%"><span
+                                style="color: #888888">&lt;!--</span>
+<span style="color: #888888">a root tag. (also used for nesting graphs in graphs) </span>
+<span style="color: #888888">--&gt;</span>
+<span style="color: #007700">&lt;navigation&gt;</span> ... <span style="color: #007700">&lt;/navigation&gt;</span>
+</pre>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </td>
+        <td class="border_bottom">
+            <img src="img_subgraphoverview.png">
+            <img src="img_subgraph.png">
+        </td>
+    </tr>
+    <tr class="border_bottom">
+        <td class="border_bottom">
+
+            <!-- HTML generated using hilite.me -->
+            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:0em 0em 0em 0em;padding:0em 0em;">
+                <table>
+                    <tr>
+                        <td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre>
+                        </td>
+                        <td><pre style="margin: 0; line-height: 125%"><span style="color: #888888">&lt;!-- multiple fragment-destinations</span>
+<span style="color: #888888">    android:id to refer to in code (&quot;jump to id&quot;)</span>
+<span style="color: #888888">    android:name of the fragment, which should be started, when navigating here</span>
+<span style="color: #888888">    android:label as header of toolbar</span>
+<span style="color: #888888">--&gt;</span>
+<span style="color: #007700">&lt;fragment</span>
+    <span style="color: #0000CC">android:id=</span><span style="background-color: #fff0f0">&quot;@+id/DrawerADest&quot;</span>
+    <span style="color: #0000CC">android:name=</span><span style="background-color: #fff0f0">&quot;com.example.navigationtest.ui.drawer.DrawerAFragment&quot;</span>
+    <span style="color: #0000CC">android:label=</span><span style="background-color: #fff0f0">&quot;@string/drawer_a_header&quot;</span>
+    <span style="color: #007700">/&gt;</span>
+</pre>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </td>
+        <td class="border_bottom">
+            <img src="img_dest.png">
+        </td>
+    </tr>
+    <tr class="border_bottom">
+        <td class="border_bottom">
+
+            <!-- HTML generated using hilite.me -->
+            <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:0em 0em 0em 0em;padding:0em 0em;">
+                <table>
+                    <tr>
+                        <td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre>
+                        </td>
+                        <td><pre style="margin: 0; line-height: 125%"><span style="color: #888888">&lt;!-- actions</span>
+<span style="color: #888888">    android:id to refer to in code (&quot;navigate on this idPath&quot;)</span>
+<span style="color: #888888">    app:destination where this action navigates to</span>
+<span style="color: #888888">    android:Animations for this transition</span>
+<span style="color: #888888">--&gt;</span>
+<span style="color: #007700">&lt;fragment</span> <span
+                                    style="color: #FF0000; background-color: #FFAAAA">...</span> <span
+                                    style="color: #007700">&gt;</span>
+    <span style="color: #007700">&lt;action</span>
+        <span style="color: #0000CC">android:id=</span><span style="background-color: #fff0f0">&quot;@+id/action_DestinationBDest_to_DestinationCDest&quot;</span>
+        <span style="color: #0000CC">app:destination=</span><span style="background-color: #fff0f0">&quot;@id/DestinationCDest&quot;</span>
+        <span style="color: #0000CC">app:enterAnim=</span><span style="background-color: #fff0f0">&quot;@anim/slide_in_right&quot;</span>
+        <span style="color: #0000CC">app:exitAnim=</span><span style="background-color: #fff0f0">&quot;@anim/slide_out_left&quot;</span>
+        <span style="color: #0000CC">app:popEnterAnim=</span><span
+                                    style="background-color: #fff0f0">&quot;@anim/slide_in_left&quot;</span>
+        <span style="color: #0000CC">app:popExitAnim=</span><span style="background-color: #fff0f0">&quot;@anim/slide_out_right&quot;</span> <span
+                                    style="color: #007700">/&gt;</span>
+<span style="color: #007700">&lt;/fragment&gt;</span>
+</pre>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td class="border_bottom">
+            <img src="img_action.png">
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

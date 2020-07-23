@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/OverflowADest"
+        android:menuCategory="secondary"
+        android:title="@string/overflow_a_menu_entry_name" />
+
+    <item
+        android:id="@+id/OverflowBDest"
+        android:menuCategory="secondary"
+        android:title="@string/overflow_b_menu_entry_name" />
+
+    <item
+        android:id="@+id/OverflowCDest"
+        android:menuCategory="secondary"
+        android:title="@string/overflow_c_menu_entry_name" />
+
+    <item
+        android:id="@+id/OverflowDDest"
+        android:menuCategory="secondary"
+        android:title="@string/overflow_d_menu_entry_name" />
+</menu>
